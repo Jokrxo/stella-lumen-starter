@@ -12,7 +12,8 @@ import { useToast } from "@/hooks/use-toast";
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Invalid email address"),
-  subject: z.string().min(5, "Subject must be at least 5 characters"),
+  phone: z.string().min(10, "Please enter a valid phone number"),
+  department: z.string().min(1, "Please select a department"),
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
@@ -23,7 +24,8 @@ export default function Contact() {
     defaultValues: {
       name: "",
       email: "",
-      subject: "",
+      phone: "",
+      department: "",
       message: "",
     },
   });
@@ -127,7 +129,7 @@ export default function Contact() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email Address</FormLabel>
+                      <FormLabel>Email Address (*)</FormLabel>
                       <FormControl>
                         <Input placeholder="john@example.com" {...field} />
                       </FormControl>
@@ -135,25 +137,48 @@ export default function Contact() {
                     </FormItem>
                   )}
                 />
-                <FormField
-                  control={form.control}
-                  name="subject"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Subject</FormLabel>
-                      <FormControl>
-                        <Input placeholder="How can we help?" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <FormField
+                    control={form.control}
+                    name="phone"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Phone</FormLabel>
+                        <FormControl>
+                          <Input placeholder="082 123 4567" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="department"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Department</FormLabel>
+                        <FormControl>
+                          <select 
+                            className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                            {...field}
+                          >
+                            <option value="">Select Department</option>
+                            <option value="Business Department">Business Department</option>
+                            <option value="Support Department">Support Department</option>
+                            <option value="Other">Other</option>
+                          </select>
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
                 <FormField
                   control={form.control}
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Message</FormLabel>
+                      <FormLabel>Your Question</FormLabel>
                       <FormControl>
                         <Textarea placeholder="Tell us more about your inquiry..." className="min-h-[150px]" {...field} />
                       </FormControl>

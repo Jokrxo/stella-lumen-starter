@@ -57,13 +57,16 @@ export default function Gallery() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row items-center gap-12 mb-12">
             <div className="md:w-1/2">
-               <h2 className="text-3xl font-serif font-bold text-primary mb-4">Risk and Reward Boardgame</h2>
+               <h2 className="text-3xl font-serif font-bold text-primary mb-4">Empowering Future Accountants</h2>
                <div className="w-20 h-1 bg-secondary mb-6" />
                <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                 We believe learning should be engaging. Our custom-developed "Risk and Reward" boardgame is a unique tool we use to train teams on governance, risk management, and strategic decision-making in a fun, interactive environment.
+                 In a dynamic collaboration that bridges corporate expertise with educational outreach, Stella Lumen (Pty) Ltd, a pioneering black-owned financial solutions firm established in 2020, proudly serves as the Official Accounting Ambassadors for the KwaZulu-Natal (KZN) Department of Education.
+               </p>
+               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                 This strategic partnership embodies the company’s commitment to Corporate Social Responsibility (CSR) by fostering financial literacy among the youth through innovative, hands-on learning experiences.
                </p>
                <p className="text-muted-foreground text-lg leading-relaxed">
-                 Players navigate real-world business scenarios, balancing risks against potential rewards, fostering critical thinking and team cohesion.
+                 At the heart of this initiative is the acclaimed Risk and Reward Boardgame, a transformative educational tool developed by Thabani Zulu CA(SA), Director of Stella Lumen and a distinguished UKZN alumnus with over 25 years in financial management and auditing.
                </p>
             </div>
             <div className="md:w-1/2 grid grid-cols-2 gap-4">

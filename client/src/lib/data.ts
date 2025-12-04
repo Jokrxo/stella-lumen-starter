@@ -1,15 +1,17 @@
 
+import {  Facebook, Linkedin, Instagram, Youtube } from "lucide-react";
+
 export const COMPANY_INFO = {
   name: "Stella Lumen",
   tagline: "Discover a Galaxy of Stars",
   phone: "031 944 4635",
   email: "info@stella-lumen.com",
-  location: "Durban, South Africa",
+  location: "52 Norfolk Terrace, Westville, KwaZulu Natal, 3629",
   socials: {
-    linkedin: "#",
-    facebook: "#",
+    linkedin: "https://za.linkedin.com/company/stella-lumen",
+    facebook: "https://www.facebook.com/profile.php?id=100094446342559",
     youtube: "https://youtube.com/@StellaLumen1",
-    instagram: "#",
+    instagram: "https://www.instagram.com/stellalumen1/",
     tiktok: "#",
   },
   founded: 2020,
@@ -266,24 +268,31 @@ export const TEAM = [
 export const BLOG_POSTS = [
   {
     id: 1,
-    title: "The Future of Financial Governance",
-    excerpt: "Exploring how digital transformation is reshaping corporate governance.",
+    title: "RIGEL PERSONAL: EXERCISING FULL PERSONAL CONTROL OVER YOUR FINANCES",
+    excerpt: "Exercising full personal control over your finances is crucial in today's economic climate.",
     date: "Oct 12, 2023",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800"
+    image: "/assets/Rigel-Personal-Package-300x300.png"
   },
   {
     id: 2,
-    title: "Optimizing SME Performance",
-    excerpt: "Key strategies for small and medium enterprises to thrive in a competitive market.",
+    title: "How to create a Logo like a Pro",
+    excerpt: "Key strategies for branding and visual identity in the corporate world.",
     date: "Sep 28, 2023",
-    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=800"
+    image: "/assets/Venus-Package-300x300.jpg"
   },
   {
     id: 3,
-    title: "Risk Management in 2024",
-    excerpt: "Preparing your business for the emerging risks of the coming year.",
+    title: "Principles of Coldness",
+    excerpt: "Understanding the dynamics of professional detachment and objective decision making.",
     date: "Sep 15, 2023",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+    image: "/assets/Polaris-Package-300x300.jpg"
+  },
+  {
+    id: 4,
+    title: "Much Space in World",
+    excerpt: "Exploring market gaps and opportunities for expansion in the global economy.",
+    date: "Aug 10, 2023",
+    image: "/assets/Astro-300x300.jpg"
   }
 ];
 
