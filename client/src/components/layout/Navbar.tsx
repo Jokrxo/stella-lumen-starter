@@ -67,9 +67,25 @@ export default function Navbar() {
                 <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
                   <div className="bg-white rounded-md shadow-lg p-2 min-w-[200px] border border-border/50">
                     {link.subItems.map((sub) => (
-                      <Link key={sub.label} href={sub.href} className="block px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-primary rounded-sm transition-colors cursor-pointer">
+                      sub.href.startsWith("http") ? (
+                        <a
+                          key={sub.label}
+                          href={sub.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-primary rounded-sm transition-colors cursor-pointer"
+                        >
                           {sub.label}
-                      </Link>
+                        </a>
+                      ) : (
+                        <Link
+                          key={sub.label}
+                          href={sub.href}
+                          className="block px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-primary rounded-sm transition-colors cursor-pointer"
+                        >
+                          {sub.label}
+                        </Link>
+                      )
                     ))}
                   </div>
                 </div>
@@ -129,9 +145,25 @@ export default function Navbar() {
                   {link.subItems && (
                     <div className="pl-4 flex flex-col gap-2 border-l-2 border-muted ml-2 mt-1">
                       {link.subItems.map((sub) => (
-                        <Link key={sub.label} href={sub.href} className="text-sm text-muted-foreground hover:text-primary py-1 cursor-pointer">
+                        sub.href.startsWith("http") ? (
+                          <a
+                            key={sub.label}
+                            href={sub.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm text-muted-foreground hover:text-primary py-1 cursor-pointer"
+                          >
                             {sub.label}
-                        </Link>
+                          </a>
+                        ) : (
+                          <Link
+                            key={sub.label}
+                            href={sub.href}
+                            className="text-sm text-muted-foreground hover:text-primary py-1 cursor-pointer"
+                          >
+                            {sub.label}
+                          </Link>
+                        )
                       ))}
                     </div>
                   )}
