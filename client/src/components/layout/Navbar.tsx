@@ -42,6 +42,7 @@ export default function Navbar() {
               src={COMPANY_INFO.logo} 
               alt={COMPANY_INFO.name} 
               className="h-10 w-auto object-contain"
+              onError={(e) => { (e.currentTarget as HTMLImageElement).src = "/assets/stella-lumen-logo.png"; }}
             />
             <span className={`text-xl font-serif font-bold tracking-wide ${
               scrolled || location !== '/' ? "text-primary" : "text-white"
@@ -89,12 +90,14 @@ export default function Navbar() {
                 </span>
               )}
           </Link>
-          <Button 
-            size="sm" 
-            className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold"
-          >
-            Get a Quote
-          </Button>
+          <Link href="/contact" className="cursor-pointer">
+            <Button 
+              size="sm" 
+              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold"
+            >
+              Get a Quote
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile Toggle */}

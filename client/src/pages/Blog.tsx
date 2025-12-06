@@ -1,69 +1,69 @@
-import { BLOG_POSTS } from "@/lib/data";
 import { Button } from "@/components/ui/button";
-import { Calendar, User, ArrowRight } from "lucide-react";
-import { Link } from "wouter";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { ArrowRight } from "lucide-react";
 
 export default function Blog() {
+  const PDF_POSTS = [
+    {
+      id: "polaris-magazine",
+      title: "Polaris Magazine",
+      image: "/assets/Polaris-Package-300x300.jpg",
+      href: "/assets/Polaris%20Magazine.pdf",
+    },
+    {
+      id: "perseus-magazine",
+      title: "Perseus Magazine",
+      image: "/assets/Perseus-Package-300x300.jpg",
+      href: "/assets/Perseus%20Magazine.pdf",
+    },
+    {
+      id: "10-risks",
+      title: "10 Risks Crippling Our Country",
+      image: "/assets/10-risks-crippling-our-country-cover.png",
+      href: "/assets/10%20Risks%20Crippling%20Our%20Country.pdf",
+      previewType: "image",
+    },
+  ];
+
   return (
     <div className="pt-20 pb-20">
       <section className="bg-muted py-16">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-4">Our Blog</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Insights, news, and updates from the Stella Lumen team.
+            Publications and resources available for download.
           </p>
         </div>
       </section>
 
       <div className="container mx-auto px-4 md:px-6 py-16">
-        <div className="grid grid-cols-1 gap-16 max-w-4xl mx-auto">
-          {BLOG_POSTS.map((post) => (
-            <article key={post.id} className="flex flex-col bg-white rounded-lg overflow-hidden shadow-lg border border-border">
-              {/* Image Carousel for Blog Post */}
-              <div className="w-full h-[400px] bg-gray-100 relative">
-                 <Carousel className="w-full h-full">
-                   <CarouselContent>
-                     <CarouselItem className="h-[400px]">
-                       <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
-                     </CarouselItem>
-                     {/* Mocking additional images for carousel effect */}
-                     <CarouselItem className="h-[400px]">
-                       <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200" alt="Alt View" className="w-full h-full object-cover" />
-                     </CarouselItem>
-                   </CarouselContent>
-                   <div className="absolute inset-0 pointer-events-none flex items-center justify-between px-4">
-                      <div className="pointer-events-auto"><CarouselPrevious variant="secondary" /></div>
-                      <div className="pointer-events-auto"><CarouselNext variant="secondary" /></div>
-                   </div>
-                 </Carousel>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {PDF_POSTS.map((post) => (
+            <article key={post.id} className="bg-white rounded-lg overflow-hidden shadow-lg border border-border flex flex-col">
+              <div className="h-64 overflow-hidden">
+                {post.previewType === "pdf" ? (
+                  <iframe
+                    src={`${post.href}#page=1&zoom=80&toolbar=0&navpanes=0`}
+                    title={post.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-full object-cover"
+                    onError={(e) => { (e.currentTarget as HTMLImageElement).src = "https://via.placeholder.com/600x400?text=Cover+Image"; }}
+                  />
+                )}
               </div>
-
-              <div className="p-8">
-                <div className="flex items-center gap-6 text-sm text-muted-foreground mb-4">
-                  <span className="flex items-center gap-2"><Calendar className="w-4 h-4 text-secondary" /> {post.date}</span>
-                  <span className="flex items-center gap-2"><User className="w-4 h-4 text-secondary" /> Admin</span>
+              <div className="p-6 flex-grow flex flex-col">
+                <h2 className="text-xl font-serif font-bold text-primary mb-4">{post.title}</h2>
+                <div className="mt-auto">
+                  <a href={post.href} target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white">
+                      Open PDF <ArrowRight className="ml-2 w-4 h-4" />
+                    </Button>
+                  </a>
                 </div>
-                
-                <h2 className="text-3xl font-serif font-bold text-primary mb-4 hover:text-secondary transition-colors cursor-pointer">
-                  {post.title}
-                </h2>
-                
-                <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                  {post.excerpt} Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-
-                <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white group">
-                  Read Full Article <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
               </div>
             </article>
           ))}

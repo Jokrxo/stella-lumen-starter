@@ -13,7 +13,8 @@ export default function Footer() {
                 <img 
                   src={COMPANY_INFO.logo} 
                   alt={COMPANY_INFO.name} 
-                  className="h-12 w-auto brightness-0 invert" // Make white for footer
+                  className="h-12 w-auto"
+                  onError={(e) => { (e.currentTarget as HTMLImageElement).src = "/assets/stella-lumen-logo.png"; }}
                 />
             </Link>
             <p className="text-white/80 text-sm leading-relaxed">

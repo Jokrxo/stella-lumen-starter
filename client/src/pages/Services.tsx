@@ -35,6 +35,7 @@ export default function ServicesPage() {
                     src={member.image} 
                     alt={member.name} 
                     className="w-full h-full object-cover"
+                    onError={(e) => { (e.currentTarget as HTMLImageElement).src = "https://via.placeholder.com/800x600?text=Team+Image"; }}
                   />
                 </div>
                 <div className="p-4 text-center">
@@ -70,9 +71,11 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ul>
-                  <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white">
-                    Learn More
-                  </Button>
+                  <Link href={`/contact?topic=${encodeURIComponent(service.title)}`}>
+                    <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white group-hover:bg-primary group-hover:text-white cursor-pointer">
+                      Learn More
+                    </Button>
+                  </Link>
                 </div>
               );
             })}
@@ -109,9 +112,10 @@ export default function ServicesPage() {
             </div>
             <div className="relative h-[500px] rounded-lg overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1553877604-8155546f8e62?auto=format&fit=crop&q=80&w=800" 
+                src="https://cdn.pixabay.com/photo/2017/06/23/10/59/code-2434271_1280.jpg" 
                 alt="Capabilities" 
                 className="w-full h-full object-cover"
+                onError={(e) => { (e.currentTarget as HTMLImageElement).src = "https://images.unsplash.com/photo-1553877604-8155546f8e62?auto=format&fit=crop&q=80&w=800"; }}
               />
             </div>
           </div>

@@ -117,7 +117,7 @@ export const PRODUCTS = [
     name: "RIGEL BUSINESS",
     category: "Small and Medium Enterprises",
     description: "Advanced yet simple SME finance management solution that updates accounts, ledgers, and statements in real time. Components: all financial modules in one platform; automated annual and monthly accounts; KPI; transaction listing/general ledger; trial balance; VAT calculations; project management accounts; invoicing/quotations; payroll with payslips; accounts summary reports.",
-    price: "Negotiable",
+    price: "R550",
     image: "/assets/Rigel-Package-300x300.jpg",
     featured: true,
   },
@@ -192,7 +192,7 @@ export const PRODUCTS = [
     category: "Audit and Risk",
     description: "Internal audit function maturity evaluation identifying QAIP gaps across principles: purpose, ethics & professionalism, governance, managing the IA function, and performing IA services. Uses built-in questionnaires and maturity criteria for periodic evaluations.",
     price: "Negotiable",
-    image: "/assets/realistic-burgundy-gold-background-vector-600nw-2463614061.jpg",
+    image: "/assets/orion-product-package.png",
   },
   {
     id: "kielz",
@@ -233,43 +233,43 @@ export const TEAM = [
     name: "Thabani Zulu CA(SA)",
     role: "Director",
     bio: "A visionary leader with extensive experience in financial management and corporate governance.",
-    image: "https://stella-lumen.com/wp-content/uploads/2025/10/IMG_1287.jpg"
+    image: "/assets/team/thabani-zulu.jpg"
   },
   {
     name: "Lusanda Ntloko",
-    role: "Senior Consultant",
+    role: "Head of Audit and Accounts Manager",
     bio: "Specialist in risk management and internal audit processes.",
-    image: "https://stella-lumen.com/wp-content/uploads/2025/10/IMG_1245.jpg"
+    image: "/assets/team/lusanda-ntloko.jpg"
   },
   {
     name: "Lizo Shongwe",
-    role: "Technical Lead",
+    role: "Office Administration",
     bio: "Expert in developing customized business solutions and technical modeling.",
-    image: "https://stella-lumen.com/wp-content/uploads/2025/10/IMG_1257.jpg"
+    image: "/assets/team/lizo-shongwe.jpg"
   },
   {
     name: "Amahle Mtolo",
-    role: "Business Analyst",
+    role: "Marketing and Risk Management",
     bio: "Dedicated to analyzing business models and optimizing performance.",
-    image: "https://stella-lumen.com/wp-content/uploads/2025/10/IMG_1219.jpg"
+    image: "/assets/team/amahle-mtolo.jpg"
   },
   {
     name: "Sinethemba Zwane",
-    role: "Client Relations",
+    role: "Information Technology",
     bio: "Ensuring client satisfaction and successful project roll-outs.",
-    image: "https://stella-lumen.com/wp-content/uploads/2025/10/IMG_128711.png"
+    image: "/assets/team/sinethemba-zwane.jpg"
   },
   {
     name: "Londiwe Mahlangu",
-    role: "Operations Manager",
+    role: "Finance",
     bio: "Streamlining internal processes for maximum efficiency.",
-    image: "https://images.unsplash.com/photo-1598550874175-4d7112ee52d9?auto=format&fit=crop&q=80&w=800"
+    image: "/assets/team/londiwe-mahlangu.jpg"
   },
   {
     name: "Luthando Zulu",
-    role: "Junior Associate",
+    role: "Information Technology",
     bio: "Bringing fresh perspectives and energy to the team.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=800"
+    image: "/assets/team/luthando-zulu.jpg"
   },
 ];
 
@@ -279,21 +279,21 @@ export const BLOG_POSTS = [
     title: "How to create a Logo like a Pro",
     excerpt: "Key strategies for branding and visual identity in the corporate world.",
     date: "Oct 12, 2023",
-    image: "https://stella-lumen.com/wp-content/uploads/2017/06/post2-1-1-300x167.jpg"
+    image: "https://stella-lumen.com/blog-2"
   },
   {
     id: 2,
     title: "Principles of Coldness",
     excerpt: "Understanding the dynamics of professional detachment and objective decision making.",
     date: "Sep 28, 2023",
-    image: "https://stella-lumen.com/wp-content/uploads/2017/06/post3-1-1-300x167.jpg"
+    image: "https://stella-lumen.com/blog-2"
   },
   {
     id: 3,
     title: "Much Space in World",
     excerpt: "Exploring market gaps and opportunities for expansion in the global economy.",
     date: "Sep 15, 2023",
-    image: "https://stella-lumen.com/wp-content/uploads/2017/06/post4-1-1-300x167.jpg"
+    image: "https://stella-lumen.com/blog-2"
   },
   {
     id: 4,
@@ -306,78 +306,78 @@ export const BLOG_POSTS = [
 
 export const INTERNS = [
   {
-    name: "Sipho Mkhize",
-    role: "Finance Intern",
-    testimonial: "The mentorship at Stella Lumen has been invaluable. I've learned more in 6 months here than I did in my entire final year.",
-    image: "https://images.unsplash.com/photo-1545996124-0501ebae84d0?auto=format&fit=crop&q=80&w=800"
+    name: "Nompumelelo Mbhele",
+    role: "Finance and Accounting Intern",
+    testimonial: "Working as an Accounting Intern at Stella Lumen, I have gained valuable hands-on experience in internal auditing and financial compliance through various projects. Honestly, the experience has been both challenging and rewarding. The environment at Stella Lumen is incredibly supportive — I’ve been able to strengthen my technical skills, understand the importance of ethics and accuracy, and learn how to handle real financial reporting tasks with confidence. So far, it’s been such a great learning curve. I’ve had the chance to connect what I learned in class to the real world. For me, this internship is more than just a job — it’s a stepping stone toward becoming a well-rounded finance professional.",
+    image: "https://stella-lumen.com/wp-content/uploads/2025/10/IMG_1237.jpg"
   },
   {
-    name: "Naledi Radebe",
-    role: "IT Intern",
-    testimonial: "Working on real-world projects like Rigel Business has given me confidence in my coding skills.",
-    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=800"
+    name: "Thabile Radebe",
+    role: "Finance and Accounting Intern",
+    testimonial: "My journey in accounting began at Luthuli High, where I developed a strong interest in numbers and financial processes. I pursued this passion at the University of Zululand, graduated with a BCom in Accounting, and have continued to build on my skills ever since. At Stella Lumen, I’ve gained hands-on experience in auditing, evaluating internal controls, supporting compliance, risk assessment, analytical review, and professional reporting, while contributing to meaningful improvements within the firm. I’m driven by a desire to grow my expertise in accounting and finance, embrace new challenges, and make a real impact wherever I work.",
+    image: "https://stella-lumen.com/wp-content/uploads/2025/10/IMG_1169.jpg"
   },
   {
-    name: "Jason Pillay",
-    role: "Business Analyst Intern",
+    name: "Nolwazi Zaca",
+    role: "Finance and Accounting Intern",
     testimonial: "A challenging but incredibly rewarding environment. The team really cares about your growth.",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800"
+    image: "https://stella-lumen.com/wp-content/uploads/2025/12/IMG_1231.jpg"
   }
 ];
 
 export const GALLERY_IMAGES = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=1200",
-    alt: "Team Workshop",
-    category: "Events"
+    src: "https://stella-lumen.com/wp-content/uploads/2025/10/Screenshot-2025-10-30-220921.png",
+    alt: "Risk and Reward",
+    category: "Boardgames"
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=1200",
-    alt: "Client Meeting",
-    category: "Office"
+    src: "https://stella-lumen.com/wp-content/uploads/2025/10/Screenshot-2025-10-30-221037.png",
+    alt: "Risk and Reward",
+    category: "Boardgames"
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200",
-    alt: "Strategy Session",
-    category: "Events"
+    src: "https://stella-lumen.com/wp-content/uploads/2025/10/Screenshot-2025-10-30-221110.png",
+    alt: "Risk and Reward",
+    category: "Boardgames"
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1200",
-    alt: "Office Culture",
-    category: "Office"
+    src: "https://stella-lumen.com/wp-content/uploads/2025/10/Screenshot-2025-10-30-221158.png",
+    alt: "Risk and Reward",
+    category: "Boardgames"
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200",
+    src: "https://stella-lumen.com/wp-content/uploads/2025/10/Screenshot-2025-10-30-221233.png",
     alt: "Presentation",
     category: "Events"
   },
   {
     id: 6,
-    src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200",
+    src: "https://stella-lumen.com/wp-content/uploads/2025/10/Screenshot-2025-10-30-221254.png",
     alt: "Collaboration",
-    category: "Office"
+    category: "Events"
   }
 ];
 
 export const BOARDGAME_IMAGES = [
   {
     id: "bg1",
-    src: "https://images.unsplash.com/photo-1611996575749-79a3a250f948?auto=format&fit=crop&q=80&w=1200",
+    src: "https://stella-lumen.com/wp-content/uploads/2025/10/Screenshot-2025-10-30-221317.png",
     alt: "Risk and Reward Game Board"
   },
   {
     id: "bg2",
-    src: "https://images.unsplash.com/photo-1632501641765-e568d9088bed?auto=format&fit=crop&q=80&w=1200",
+    src: "https://stella-lumen.com/wp-content/uploads/2025/10/Screenshot-2025-10-30-221333.png",
     alt: "Playing the Game"
   },
   {
     id: "bg3",
-    src: "https://images.unsplash.com/photo-1595590424283-b8f17842773f?auto=format&fit=crop&q=80&w=1200",
+    src: "https://stella-lumen.com/wp-content/uploads/2025/10/Screenshot-2025-10-30-221037.png",
     alt: "Game Pieces"
   }
 ];
