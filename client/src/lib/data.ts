@@ -192,7 +192,7 @@ export const PRODUCTS = [
     category: "Audit and Risk",
     description: "Internal audit function maturity evaluation identifying QAIP gaps across principles: purpose, ethics & professionalism, governance, managing the IA function, and performing IA services. Uses built-in questionnaires and maturity criteria for periodic evaluations.",
     price: "Negotiable",
-    image: "https://via.placeholder.com/300?text=Orion",
+    image: "/assets/realistic-burgundy-gold-background-vector-600nw-2463614061.jpg",
   },
   {
     id: "kielz",
