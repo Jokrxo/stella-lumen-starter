@@ -74,11 +74,11 @@ export default function TrialProducts() {
                   <FileText className="w-4 h-4" /> Release Notes
                 </Button>
               </a>
-              <Link href="/rigel-business-user-manual">
+              <a href="https://stella-lumen.com/downloads/rigel-business-beta/UserManual.pdf" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" className="gap-2 cursor-pointer">
-                  <FileText className="w-4 h-4" /> User Manual Page
+                  <FileText className="w-4 h-4" /> User Manual (PDF)
                 </Button>
-              </Link>
+              </a>
               <a href="https://stella-lumen.com/downloads/rigel-business-beta/UserManual.pdf" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" className="gap-2 cursor-pointer">
                   <FileText className="w-4 h-4" /> View PDF

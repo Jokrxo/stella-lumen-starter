@@ -37,7 +37,7 @@ export const NAV_LINKS = [
       { label: "All Products", href: "/shop" },
       { label: "Product Details", href: "/product-category" },
       { label: "Trial Products", href: "/projects" },
-      { label: "User Manual", href: "/rigel-business-user-manual" }
+      { label: "User Manual", href: "https://stella-lumen.com/downloads/rigel-business-beta/UserManual.pdf" }
     ]
   },
   { label: "Services", href: "/team-2" },
