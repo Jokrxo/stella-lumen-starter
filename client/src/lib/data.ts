@@ -36,8 +36,8 @@ export const NAV_LINKS = [
     subItems: [
       { label: "All Products", href: "/shop" },
       { label: "Product Details", href: "/product-category" },
-      { label: "Trial Products", href: "/projects" },
-      { label: "User Manual", href: "/rigel-business-user-manual" }
+      { label: "Trial Products", href: "https://stella-lumen.com/projects/rigel" },
+      { label: "User Manual", href: "https://stella-lumen.com/rigel-business-user-manual" }
     ]
   },
   { label: "Services", href: "/team-2" },
