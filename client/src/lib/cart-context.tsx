@@ -26,6 +26,22 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const { toast } = useToast();
 
   const addToCart = (product: any) => {
+    const parsePrice = (p: unknown): number => {
+      if (typeof p === "number") return p;
+      if (typeof p !== "string") return 0;
+      let s = p.trim();
+      s = s.replace(/[A-Za-z\s]/g, "");
+      if (s.includes(".") && s.includes(",")) {
+        s = s.replace(/\./g, "");
+        s = s.replace(/,/g, ".");
+      } else if (s.includes(",") && !s.includes(".")) {
+        s = s.replace(/,/g, ".");
+      } else {
+        s = s.replace(/,/g, "");
+      }
+      const n = parseFloat(s);
+      return isNaN(n) ? 0 : n;
+    };
     setItems(prev => {
       const existing = prev.find(item => item.id === product.id);
       if (existing) {
@@ -38,7 +54,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       return [...prev, { 
         id: product.id, 
         name: product.name, 
-        price: typeof product.price === 'number' ? product.price : 0, 
+        price: parsePrice(product.price), 
         quantity: 1,
         image: product.image
       }];

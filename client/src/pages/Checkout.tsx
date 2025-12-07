@@ -238,9 +238,19 @@ export default function Checkout() {
                   )}
                 </div>
 
-                <Button type="submit" className="w-full bg-primary hover:bg-secondary hover:text-primary font-bold py-6 text-lg">
-                  Place Order
-                </Button>
+                <div className="flex flex-col gap-3">
+                  <Button type="submit" className="w-full bg-primary hover:bg-secondary hover:text-primary font-bold py-6 text-lg">
+                    Place Order
+                  </Button>
+                  <a href="https://payment.payfast.io/eng/process/payment/e91b8047-eb11-43d7-872b-95861c1d0377" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" className="w-full font-bold py-6 text-lg">
+                      Pay via PayFast
+                    </Button>
+                  </a>
+                  <div className="text-xs text-muted-foreground">
+                    SmartScreen: More info → Run anyway. Bugs: info@stella-lumen.com
+                  </div>
+                </div>
               </div>
             </div>
           </form>
