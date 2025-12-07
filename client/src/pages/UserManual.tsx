@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import SectionHeader from "@/components/ui/section-header";
 import { Download, Youtube, ArrowLeft } from "lucide-react";
 import { Link } from "wouter";
 
@@ -6,11 +7,13 @@ export default function UserManual() {
   return (
     <div className="pt-20 pb-20">
       <section className="bg-muted py-16">
-        <div className="container mx-auto px-4 md:px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-4">User Manual</h1>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive documentation for Rigel Business.
-          </p>
+        <div className="container mx-auto px-4 md:px-6">
+          <SectionHeader
+            title="User Manual"
+            subtitle="Comprehensive documentation for Rigel Business."
+            align="center"
+            size="xl"
+          />
         </div>
       </section>
 
