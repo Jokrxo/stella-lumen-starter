@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { COMPANY_INFO, TEAM } from "@/lib/data";
+import SectionHeader from "@/components/ui/section-header";
 import { CheckCircle2 } from "lucide-react";
 
 export default function About() {
@@ -110,8 +111,7 @@ export default function About() {
       {/* Team Preview */}
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl font-serif font-bold text-primary mb-2 text-center">Meet Our Leadership</h2>
-          <div className="w-20 h-1 bg-secondary mx-auto mb-8" />
+          <SectionHeader title="Meet Our Leadership" align="center" size="lg" />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
             {TEAM.filter(m => ["Thabani Zulu CA(SA)", "Lusanda Ntloko", "Lizo Shongwe", "Amahle Mtolo", "Luthando Zulu"].includes(m.name)).map((member) => (
               <div key={member.name} className="bg.white rounded-lg overflow-hidden shadow-md group">

@@ -1,4 +1,5 @@
 import { PAGE_SERVICES, TEAM } from "@/lib/data";
+import SectionHeader from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Check, ArrowRight } from "lucide-react";
@@ -21,12 +22,13 @@ export default function ServicesPage() {
       {/* Services Team Section */}
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-serif font-bold text-primary mb-4">Expert Team</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Our dedicated professionals are here to guide you through every step of your journey.
-            </p>
-          </div>
+          <SectionHeader
+            title="Expert Team"
+            subtitle="Our dedicated professionals are here to guide you through every step of your journey."
+            align="center"
+            size="lg"
+            className="mb-10"
+          />
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {TEAM.slice(0, 4).map((member) => (
               <div key={member.name} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
@@ -88,10 +90,12 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl font-serif font-bold text-primary mb-6">Our Capabilities</h2>
-              <p className="text-muted-foreground mb-8">
-                We combine industry expertise with technical prowess to deliver results that matter.
-              </p>
+              <SectionHeader
+                title="Our Capabilities"
+                subtitle="We combine industry expertise with technical prowess to deliver results that matter."
+                size="lg"
+                className="mb-4"
+              />
               <div className="space-y-4">
                 {[
                   "Advanced Financial Modelling",

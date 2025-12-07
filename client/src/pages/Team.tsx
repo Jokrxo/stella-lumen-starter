@@ -1,16 +1,18 @@
 import { motion } from "framer-motion";
 import { TEAM } from "@/lib/data";
+import SectionHeader from "@/components/ui/section-header";
 
 export default function Team() {
   return (
     <div className="pt-20 pb-20">
       <section className="bg-primary py-20 text-white">
-        <div className="container mx-auto px-4 md:px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-2">Our Team</h1>
-          <div className="w-20 h-1 bg-secondary mx-auto mb-6" />
-          <p className="max-w-2xl mx-auto text-white/80 text-lg">
-            The brilliant minds behind Stella Lumen. We are a diverse team of experts dedicated to your success.
-          </p>
+        <div className="container mx-auto px-4 md:px-6">
+          <SectionHeader
+            title="Our Team"
+            subtitle="The brilliant minds behind Stella Lumen. We are a diverse team of experts dedicated to your success."
+            align="center"
+            size="xl"
+          />
         </div>
       </section>
 

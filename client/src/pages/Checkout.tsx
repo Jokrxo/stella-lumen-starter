@@ -8,6 +8,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useCart } from "@/lib/cart-context";
 import { useToast } from "@/hooks/use-toast";
 import { useLocation } from "wouter";
+import SectionHeader from "@/components/ui/section-header";
 
 const checkoutSchema = z.object({
   firstName: z.string().min(2),
@@ -52,8 +53,7 @@ export default function Checkout() {
     <div className="pt-20 pb-20">
       <section className="bg-muted py-10 mb-10">
         <div className="container mx-auto px-4 md:px-6">
-           <h1 className="text-3xl font-serif font-bold text-primary">Checkout</h1>
-           <div className="w-20 h-1 bg-secondary mt-2" />
+           <SectionHeader title="Checkout" size="lg" />
         </div>
       </section>
 

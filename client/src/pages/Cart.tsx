@@ -1,4 +1,5 @@
 import { useCart } from "@/lib/cart-context";
+import SectionHeader from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Link } from "wouter";
@@ -23,8 +24,7 @@ export default function Cart() {
     <div className="pt-20 pb-20">
       <section className="bg-muted py-10 mb-10">
         <div className="container mx-auto px-4 md:px-6">
-           <h1 className="text-3xl font-serif font-bold text-primary">Shopping Cart</h1>
-           <div className="w-20 h-1 bg-secondary mt-2" />
+           <SectionHeader title="Shopping Cart" size="lg" />
         </div>
       </section>
 
