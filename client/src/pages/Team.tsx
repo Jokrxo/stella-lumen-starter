@@ -6,7 +6,8 @@ export default function Team() {
     <div className="pt-20 pb-20">
       <section className="bg-primary py-20 text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">Our Team</h1>
+          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-2">Our Team</h1>
+          <div className="w-20 h-1 bg-secondary mx-auto mb-6" />
           <p className="max-w-2xl mx-auto text-white/80 text-lg">
             The brilliant minds behind Stella Lumen. We are a diverse team of experts dedicated to your success.
           </p>
@@ -43,7 +44,7 @@ export default function Team() {
                   </p>
                   <div className="mt-6 pt-6 border-t border-border">
                      <span className="text-xs font-bold text-primary uppercase tracking-widest">Core Value</span>
-                     <p className="text-sm mt-1 font-medium italic">"Commitment to Excellence"</p>
+                     <p className="text-sm mt-1 font-medium italic">"{(member as any).coreValue || "Excellence"}"</p>
                   </div>
                 </div>
               </motion.div>

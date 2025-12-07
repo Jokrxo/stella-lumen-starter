@@ -247,43 +247,50 @@ export const TEAM = [
     name: "Thabani Zulu CA(SA)",
     role: "Director",
     bio: "A visionary leader with extensive experience in financial management and corporate governance.",
-    image: "/assets/team/thabani-zulu.jpg"
+    image: "/assets/team/thabani-zulu.jpg",
+    coreValue: "Integrity"
   },
   {
     name: "Lusanda Ntloko",
     role: "Head of Audit and Accounts Manager",
     bio: "Specialist in risk management and internal audit processes.",
-    image: "/assets/team/lusanda-ntloko.jpg"
+    image: "/assets/team/lusanda-ntloko.jpg",
+    coreValue: "Precision"
   },
   {
     name: "Lizo Shongwe",
     role: "Office Administration",
     bio: "Expert in developing customized business solutions and technical modeling.",
-    image: "/assets/team/lizo-shongwe.jpg"
+    image: "/assets/team/lizo-shongwe.jpg",
+    coreValue: "Reliability"
   },
   {
     name: "Amahle Mtolo",
     role: "Marketing and Risk Management",
     bio: "Dedicated to analyzing business models and optimizing performance.",
-    image: "/assets/team/amahle-mtolo.jpg"
+    image: "/assets/team/amahle-mtolo.jpg",
+    coreValue: "Creativity"
   },
   {
     name: "Sinethemba Zwane",
     role: "Information Technology",
     bio: "Ensuring client satisfaction and successful project roll-outs.",
-    image: "/assets/team/sinethemba-zwane.jpg"
+    image: "/assets/team/sinethemba-zwane.jpg",
+    coreValue: "Innovation"
   },
   {
     name: "Londiwe Mahlangu",
     role: "Finance",
     bio: "Streamlining internal processes for maximum efficiency.",
-    image: "/assets/team/londiwe-mahlangu.jpg"
+    image: "/assets/team/londiwe-mahlangu.jpg",
+    coreValue: "Stewardship"
   },
   {
     name: "Luthando Zulu",
     role: "Information Technology",
     bio: "Bringing fresh perspectives and energy to the team.",
-    image: "/assets/team/luthando-zulu.jpg"
+    image: "/assets/team/luthando-zulu.jpg",
+    coreValue: "Adaptability"
   },
 ];
 

@@ -110,10 +110,11 @@ export default function About() {
       {/* Team Preview */}
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl font-serif font-bold text-primary mb-10 text-center">Meet Our Leadership</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {TEAM.slice(0, 4).map((member) => (
-              <div key={member.name} className="bg-white rounded-lg overflow-hidden shadow-md group">
+          <h2 className="text-3xl font-serif font-bold text-primary mb-2 text-center">Meet Our Leadership</h2>
+          <div className="w-20 h-1 bg-secondary mx-auto mb-8" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+            {TEAM.filter(m => ["Thabani Zulu CA(SA)", "Lusanda Ntloko", "Lizo Shongwe", "Amahle Mtolo", "Luthando Zulu"].includes(m.name)).map((member) => (
+              <div key={member.name} className="bg.white rounded-lg overflow-hidden shadow-md group">
                 <div className="h-64 overflow-hidden">
                   <img 
                     src={member.image} 
