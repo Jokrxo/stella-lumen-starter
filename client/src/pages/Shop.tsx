@@ -3,10 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { PRODUCTS } from "@/lib/data";
 import ProductCard from "@/components/ui/product-card";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, ChevronUp, Filter } from "lucide-react";
+import { ChevronDown, ChevronUp, Filter, ShoppingCart, ArrowRight } from "lucide-react";
+import { useCart } from "@/lib/cart-context";
 import * as Accordion from "@radix-ui/react-accordion";
 
 export default function Shop() {
+  const { addToCart } = useCart();
   // Extract unique categories
   const categories = Array.from(new Set(PRODUCTS.map(p => p.category)));
   const [activeCategory, setActiveCategory] = useState<string>("All");
@@ -115,13 +117,35 @@ export default function Shop() {
                          <div className="w-20 h-20 bg-muted shrink-0">
                            <img src={p.image} alt={p.name} className="w-full h-full object-cover" />
                          </div>
-                         <div>
-                           <h4 className="font-bold text-primary">{p.name}</h4>
-                           <p className="text-xs text-muted-foreground line-clamp-2 mb-2">{p.description}</p>
-                           <span className="text-sm font-semibold text-secondary-foreground">
-                             {typeof p.price === 'number' ? `R${p.price}` : (p.price || 'Enquire')}
-                           </span>
-                         </div>
+                        <div className="flex-1">
+                          <h4 className="font.bold text-primary">{p.name}</h4>
+                          <p className="text-xs text-muted-foreground line-clamp-2 mb-2">{p.description}</p>
+                          <span className="text-sm font-semibold text-secondary-foreground">
+                            {typeof p.price === 'number' ? `R${p.price}` : (p.price || 'Enquire')}
+                          </span>
+                        </div>
+                        <div className="self-end ml-auto">
+                          {typeof p.price === 'number' ? (
+                            <Button
+                              size="sm"
+                              className="rounded-none bg-primary text-white hover:bg-secondary hover:text-primary"
+                              onClick={() => addToCart(p)}
+                            >
+                              <ShoppingCart className="w-4 h-4 mr-2" /> Add
+                            </Button>
+                          ) : (
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              className="rounded-none border-primary text-primary hover:bg-primary hover:text-white"
+                              asChild
+                            >
+                              <a href="/contact" className="cursor-pointer">
+                                Enquire <ArrowRight className="w-4 h-4 ml-2" />
+                              </a>
+                            </Button>
+                          )}
+                        </div>
                        </div>
                      ))}
                    </div>
