@@ -117,7 +117,7 @@ export const PRODUCTS = [
     name: "RIGEL BUSINESS",
     category: "Small and Medium Enterprises",
     description: "Advanced yet simple SME finance management solution that updates accounts, ledgers, and statements in real time. Components: all financial modules in one platform; automated annual and monthly accounts; KPI; transaction listing/general ledger; trial balance; VAT calculations; project management accounts; invoicing/quotations; payroll with payslips; accounts summary reports.",
-    price: "R550",
+    price: "R350",
     image: "/assets/Rigel-Package-300x300.jpg",
     featured: true,
   },
