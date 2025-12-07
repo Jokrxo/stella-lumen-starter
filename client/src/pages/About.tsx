@@ -36,7 +36,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-          <h2 className="text-3xl font-serif font-bold text-primary mb-6">Our Background</h2>
+          <SectionHeader title="Our Background" size="lg" />
           <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
             Founded in {COMPANY_INFO.founded}, {COMPANY_INFO.name} brings together over {COMPANY_INFO.experience} years of combined experience in the financial and corporate sectors. We are dedicated to illuminating the path to success for businesses of all sizes.
           </p>
@@ -63,7 +63,7 @@ export default function About() {
       {/* Specializations */}
       <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl font-serif font-bold mb-10 text-center">Our Specializations</h2>
+          <SectionHeader title="Our Specializations" align="center" size="lg" />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {specializations.map((spec, idx) => (
               <motion.div 
@@ -85,7 +85,7 @@ export default function About() {
       {/* Business Model */}
       <section className="py-20">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-3xl font-serif font-bold text-primary mb-12">Our Business Model</h2>
+          <SectionHeader title="Our Business Model" align="center" size="lg" className="mb-4" />
           <div className="flex flex-wrap justify-center gap-4 lg:gap-8">
               {businessModelSteps.map((step, index) => (
                 <div key={step.title} className="flex items-center">
@@ -114,7 +114,7 @@ export default function About() {
           <SectionHeader title="Meet Our Leadership" align="center" size="lg" />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
             {TEAM.filter(m => ["Thabani Zulu CA(SA)", "Lusanda Ntloko", "Lizo Shongwe", "Amahle Mtolo", "Luthando Zulu"].includes(m.name)).map((member) => (
-              <div key={member.name} className="bg.white rounded-lg overflow-hidden shadow-md group">
+              <div key={member.name} className="bg-white rounded-lg overflow-hidden shadow-md group">
                 <div className="h-64 overflow-hidden">
                   <img 
                     src={member.image} 
