@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useCart } from "@/lib/cart-context";
 import { ShoppingCart, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
-import { WORDPRESS_PRODUCT_IDS } from "@/lib/data";
+const PAYFAST_URL = "https://payment.payfast.io/eng/process/payment/e91b8047-eb11-43d7-872b-95861c1d0377";
 
 interface ProductCardProps {
   product: {
@@ -26,7 +26,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       whileHover={{ y: -10 }}
       className="group bg-white shadow-lg border border-border overflow-hidden flex flex-col h-full"
     >
-      <div className="relative h-64 overflow-hidden bg-muted">
+      <div className="relative h-72 overflow-hidden bg-muted">
         <img
           src={product.image}
           alt={product.name}
@@ -39,6 +39,11 @@ export default function ProductCard({ product }: ProductCardProps) {
               View Details
             </Button>
           </Link>
+          <a href={PAYFAST_URL} target="_blank" rel="noopener noreferrer">
+            <Button variant="secondary" size="sm" className="rounded-full cursor-pointer">
+              Buy Now
+            </Button>
+          </a>
         </div>
         <div className="absolute top-4 left-4 bg-secondary text-secondary-foreground px-3 py-1 text-xs font-bold uppercase tracking-wider">
           {product.category}
@@ -59,7 +64,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           }
           </div>
           
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-wrap min-h-[56px]">
             <Button 
               size="sm" 
               className="rounded-none bg-primary text-white hover:bg-secondary hover:text-primary transition-colors"
@@ -75,17 +80,15 @@ export default function ProductCard({ product }: ProductCardProps) {
                 </Button>
               </Link>
             )}
-            {WORDPRESS_PRODUCT_IDS[product.id] && (
-              <a
-                href={`https://stella-lumen.com/?add-to-cart=${WORDPRESS_PRODUCT_IDS[product.id]}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button size="sm" variant="outline" className="rounded-none cursor-pointer">
-                  Buy Now (WooCommerce)
-                </Button>
-              </a>
-            )}
+            <a
+              href={PAYFAST_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="sm" variant="outline" className="rounded-none cursor-pointer">
+                Buy Now
+              </Button>
+            </a>
           </div>
         </div>
       </div>
