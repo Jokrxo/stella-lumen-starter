@@ -132,7 +132,7 @@ export default function Shop() {
                               className="rounded-none bg-primary text-white hover:bg-secondary hover:text-primary"
                               onClick={() => addToCart(p)}
                             >
-                              <ShoppingCart className="w-4 h-4 mr-2" /> Add
+                              <ShoppingCart className="w-4 h-4" /> Add
                             </Button>
                             {typeof p.price !== 'number' && (
                               <Button
@@ -142,7 +142,7 @@ export default function Shop() {
                                 asChild
                               >
                                 <a href="/contact" className="cursor-pointer">
-                                  Enquire <ArrowRight className="w-4 h-4 ml-2" />
+                                  Enquire <ArrowRight className="w-4 h-4" />
                                 </a>
                               </Button>
                             )}

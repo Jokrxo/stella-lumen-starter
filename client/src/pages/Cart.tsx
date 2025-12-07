@@ -157,9 +157,9 @@ export default function Cart() {
 
               <div className="flex flex-col gap-3">
                 <Link href="/checkout">
-                  <Button className="w-full bg-primary hover:bg-secondary hover:text-primary font-bold py-6">
-                    Proceed to Checkout <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
+                <Button className="w-full bg-primary hover:bg-secondary hover:text-primary font-bold py-6">
+                  Proceed to Checkout <ArrowRight className="w-4 h-4" />
+                </Button>
                 </Link>
                 <a href="https://payment.payfast.io/eng/process/payment/e91b8047-eb11-43d7-872b-95861c1d0377" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" className="w-full font-bold py-6">

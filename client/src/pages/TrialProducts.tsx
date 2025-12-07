@@ -142,7 +142,7 @@ export default function TrialProducts() {
                 </div>
                 <Link href="/checkout">
                   <Button className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-6 cursor-pointer">
-                    <ShoppingCart className="mr-2 w-5 h-5" /> Proceed to Checkout
+                    <ShoppingCart className="w-5 h-5" /> Proceed to Checkout
                   </Button>
                 </Link>
               </div>

@@ -70,14 +70,14 @@ export default function ProductCard({ product }: ProductCardProps) {
               className="rounded-none bg-primary text-white hover:bg-secondary hover:text-primary transition-colors"
               onClick={() => addToCart(product)}
             >
-              <ShoppingCart className="w-4 h-4 mr-2" />
+              <ShoppingCart className="w-4 h-4" />
               Add
             </Button>
             {!isPriceNumber && (
               <Link href="/contact">
                 <Button size="sm" variant="outline" className="rounded-none border-primary text-primary hover:bg-primary hover:text-white cursor-pointer">
-                  Enquire <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
+                Enquire <ArrowRight className="w-4 h-4" />
+              </Button>
               </Link>
             )}
             <a
