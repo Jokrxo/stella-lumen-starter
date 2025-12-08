@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useCart } from "@/lib/cart-context";
 import { ShoppingCart, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
+const PAYFAST_URL = "https://payment.payfast.io/eng/process/payment/e91b8047-eb11-43d7-872b-95861c1d0377";
 
 interface ProductCardProps {
   product: {
@@ -38,6 +39,11 @@ export default function ProductCard({ product }: ProductCardProps) {
               View Details
             </Button>
           </Link>
+          <a href={PAYFAST_URL} target="_blank" rel="noopener noreferrer">
+            <Button variant="secondary" size="sm" className="cursor-pointer">
+              Buy Now
+            </Button>
+          </a>
         </div>
         <div className="absolute top-4 left-4 bg-secondary text-secondary-foreground px-3 py-1 text-xs font-bold uppercase tracking-wider">
           {product.category}
