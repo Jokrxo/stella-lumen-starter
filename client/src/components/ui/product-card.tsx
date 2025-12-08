@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { useCart } from "@/lib/cart-context";
 import { ShoppingCart, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
-const PAYFAST_URL = "https://payment.payfast.io/eng/process/payment/e91b8047-eb11-43d7-872b-95861c1d0377";
 
 interface ProductCardProps {
   product: {
@@ -35,15 +34,10 @@ export default function ProductCard({ product }: ProductCardProps) {
         />
         <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
           <Link href={`/product/${product.id}`}>
-            <Button variant="secondary" size="sm" className="rounded-full cursor-pointer">
+            <Button variant="secondary" size="sm" className="cursor-pointer">
               View Details
             </Button>
           </Link>
-          <a href={PAYFAST_URL} target="_blank" rel="noopener noreferrer">
-            <Button variant="secondary" size="sm" className="rounded-full cursor-pointer">
-              Buy Now
-            </Button>
-          </a>
         </div>
         <div className="absolute top-4 left-4 bg-secondary text-secondary-foreground px-3 py-1 text-xs font-bold uppercase tracking-wider">
           {product.category}
@@ -56,7 +50,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           {product.description}
         </p>
         
-        <div className="pt-4 border-t border-border mt-auto flex items.center justify-between">
+        <div className="pt-4 border-t border-border mt-auto flex items-center justify-between">
           <div className="text-lg font-bold text-primary">
           {product.price 
             ? (isPriceNumber ? `R${product.price}` : product.price)
@@ -64,10 +58,10 @@ export default function ProductCard({ product }: ProductCardProps) {
           }
           </div>
           
-          <div className="flex items-center gap-2 flex-wrap min-h-[56px]">
+          <div className="flex items-center gap-3 flex-wrap">
             <Button 
               size="sm" 
-              className="rounded-none bg-primary text-white hover:bg-secondary hover:text-primary transition-colors"
+              className="bg-primary text-white hover:bg-secondary hover:text-primary transition-colors"
               onClick={() => addToCart(product)}
             >
               <ShoppingCart className="w-4 h-4" />
@@ -75,20 +69,11 @@ export default function ProductCard({ product }: ProductCardProps) {
             </Button>
             {!isPriceNumber && (
               <Link href="/contact">
-                <Button size="sm" variant="outline" className="rounded-none border-primary text-primary hover:bg-primary hover:text-white cursor-pointer">
+                <Button size="sm" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white cursor-pointer">
                 Enquire <ArrowRight className="w-4 h-4" />
               </Button>
               </Link>
             )}
-            <a
-              href={PAYFAST_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button size="sm" variant="outline" className="rounded-none cursor-pointer">
-                Buy Now
-              </Button>
-            </a>
           </div>
         </div>
       </div>
