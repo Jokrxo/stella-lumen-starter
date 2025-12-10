@@ -7,7 +7,7 @@
     "dev": "vite dev --port 5000",
     "build": "vite build",
     "start": "vite preview",
-    "check": "tsc"
+    "check": "tsc",
     "build:dev": "vite build --mode development",
     "preview": "vite preview"   
   },
