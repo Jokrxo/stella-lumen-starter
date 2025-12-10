@@ -38,6 +38,7 @@ function Router() {
         <Route path="/cart" component={Cart} />
         <Route path="/checkout" component={Checkout} />
         <Route path="/projects" component={TrialProducts} />
+        <Route path="/trial-products" component={TrialProducts} />
         <Route path="/rigel-business-user-manual" component={UserManual} />
         <Route path="/internship" component={Internship} />
         <Route path="/blog" component={Blog} />

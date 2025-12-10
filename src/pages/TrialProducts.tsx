@@ -1,9 +1,22 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Download, AlertTriangle, FileText, ShoppingCart } from "lucide-react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
+import { useCart } from "@/lib/cart-context";
+import { PRODUCTS } from "@/lib/data";
 
 export default function TrialProducts() {
+  const { addToCart } = useCart();
+  const [, setLocation] = useLocation();
+  
+  const rigelProduct = PRODUCTS.find(p => p.id === "rigel-business");
+  
+  const handleProceedToCheckout = () => {
+    if (rigelProduct) {
+      addToCart(rigelProduct);
+    }
+    setLocation("/checkout");
+  };
   const features = [
     "Payroll Management",
     "SARS Reporting",
@@ -140,11 +153,12 @@ export default function TrialProducts() {
                     I agree to the <a href="https://stella-lumen.com/agreements/RIGEL-EULA.pdf" target="_blank" rel="noopener noreferrer" className="underline text-primary">EULA</a>
                   </label>
                 </div>
-                <Link href="/checkout">
-                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-6 cursor-pointer">
-                    <ShoppingCart className="w-5 h-5" /> Proceed to Checkout
-                  </Button>
-                </Link>
+                <Button 
+                  onClick={handleProceedToCheckout}
+                  className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-6 cursor-pointer"
+                >
+                  <ShoppingCart className="w-5 h-5 mr-2" /> Proceed to Checkout
+                </Button>
               </div>
             </motion.div>
 
