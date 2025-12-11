@@ -9,8 +9,8 @@ export default function Blog() {
       title: "Polaris Magazine",
       description: "Discover insights and strategies for navigating the modern business landscape. This comprehensive guide covers essential topics for entrepreneurs and business leaders.",
       image: "/assets/Polaris-Package-300x300.jpg",
-      href: "/assets/Polaris Magazine.pdf",
-      filename: "Polaris Magazine.pdf",
+      href: "/assets/polaris-magazine.pdf",
+      filename: "Polaris-Magazine.pdf",
       category: "Business Insights",
     },
     {
@@ -18,8 +18,8 @@ export default function Blog() {
       title: "Perseus Magazine",
       description: "A deep dive into innovation and technology trends shaping South African businesses. Learn how to leverage cutting-edge solutions for growth.",
       image: "/assets/Perseus-Package-300x300.jpg",
-      href: "/assets/Perseus Magazine.pdf",
-      filename: "Perseus Magazine.pdf",
+      href: "/assets/perseus-magazine.pdf",
+      filename: "Perseus-Magazine.pdf",
       category: "Technology",
     },
     {
@@ -27,8 +27,8 @@ export default function Blog() {
       title: "10 Risks Crippling Our Country",
       description: "An analytical exploration of the critical challenges facing South Africa's economy and practical strategies for businesses to navigate uncertainty.",
       image: "/assets/10-risks-crippling-our-country-cover.png",
-      href: "/assets/10 Risks Crippling Our Country.pdf",
-      filename: "10 Risks Crippling Our Country.pdf",
+      href: "/assets/10-risks-crippling-our-country.pdf",
+      filename: "10-Risks-Crippling-Our-Country.pdf",
       category: "Economic Analysis",
     },
   ];
