@@ -28,11 +28,13 @@ function Router() {
     <Layout>
       <Switch>
         <Route path="/" component={Home} />
+        <Route path="/about" component={About} />
         <Route path="/about-us" component={About} />
         <Route path="/team" component={Team} />
         <Route path="/shop" component={Shop} />
         <Route path="/product/:id" component={ProductDetails} />
         <Route path="/product-category" component={Shop} />
+        <Route path="/services" component={Services} />
         <Route path="/team-2" component={Services} />
         <Route path="/contact" component={Contact} />
         <Route path="/cart" component={Cart} />
@@ -40,6 +42,7 @@ function Router() {
         <Route path="/projects" component={TrialProducts} />
         <Route path="/trial-products" component={TrialProducts} />
         <Route path="/rigel-business-user-manual" component={UserManual} />
+        <Route path="/user-manual" component={UserManual} />
         <Route path="/internship" component={Internship} />
         <Route path="/blog" component={Blog} />
         <Route path="/gallery" component={Gallery} />
